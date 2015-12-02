@@ -2,7 +2,9 @@
 // Bootswatch
 // -----------------------------------------------------
 
-@import url("//fonts.googleapis.com/css?family=Lato:300,400,700");
+@if $font-import-enabled {
+  @import url("//fonts.googleapis.com/css?family=Lato:300,400,700");
+}
 
 // Navbar =====================================================================
 
