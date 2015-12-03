@@ -2,22 +2,24 @@
 // Bootswatch
 // -----------------------------------------------------
 
-@if $font-import-enabled {
-  @import url("//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700");
-}
+@if $font-family-import {
+  @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700");
+} 
 
 // Navbar =====================================================================
 
-.navbar-inverse {
+.navbar {
 
-  .badge {
-    background-color: #fff;
-    color: $brand-primary;
+  .navbar-inverse {
+
+    .badge {
+      background-color: #fff;
+      color: $brand-primary;
+    }
   }
 }
 
 // Buttons ====================================================================
-
 
 // Typography =================================================================
 
@@ -200,48 +202,53 @@ table,
 
 // Containers =================================================================
 
-.panel-heading,
-.panel-footer {
-  border-top-right-radius: 0;
-  border-top-left-radius: 0;
-}
+.panel {
+  .panel-heading,
+  .panel-footer {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
 
-.panel-default {
-  .close {
-    color: $text-color;
+  .panel-default {
+    .close {
+      color: $text-color;
+    }
   }
 }
 
-a.list-group-item-success {
-  &.active {
-    background-color: $state-success-bg;
+a.list-group-item {
+
+  a.list-group-item-success {
+    &.active {
+      background-color: $state-success-bg;
+    }
+
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-success-bg, 5%);
+    }
   }
 
-  &.active:hover,
-  &.active:focus {
-    background-color: darken($state-success-bg, 5%);
-  }
-}
-
-a.list-group-item-warning {
-  &.active {
-    background-color: $state-warning-bg;
-  }
-
-  &.active:hover,
-  &.active:focus {
-    background-color: darken($state-warning-bg, 5%);
-  }
-}
-
-a.list-group-item-danger {
-  &.active {
-    background-color: $state-danger-bg;
+  a.list-group-item-warning {
+    &.active {
+      background-color: $state-warning-bg;
+    }
+    
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-warning-bg, 5%);
+    }
   }
 
-  &.active:hover,
-  &.active:focus {
-    background-color: darken($state-danger-bg, 5%);
+  a.list-group-item-danger {
+    &.active {
+      background-color: $state-danger-bg;
+    }
+    
+    &.active:hover,
+    &.active:focus {
+      background-color: darken($state-danger-bg, 5%);
+    }
   }
 }
 

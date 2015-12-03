@@ -2,9 +2,9 @@
 require "bundler/gem_tasks"
 
 THEMES = %w(
-  amelia
   cerulean
   cosmo
+  custom
   cyborg
   darkly
   flatly

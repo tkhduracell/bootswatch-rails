@@ -2,9 +2,9 @@
 // Bootswatch
 // -----------------------------------------------------
 
-@if $font-import-enabled {
-  @import url("//fonts.googleapis.com/css?family=News+Cycle:400,700");
-}
+@if $font-family-import {
+  @import url("https://fonts.googleapis.com/css?family=News+Cycle:400,700");
+} 
 
 // Navbar =====================================================================
 
@@ -12,21 +12,21 @@
   font-size: 18px;
   font-family: $font-family-sans-serif;
   font-weight: $headings-font-weight;
-}
 
-.navbar-default {
+  .navbar-default {
 
-  .badge {
-    background-color: #000;
-    color: #fff;
+    .badge {
+      background-color: #000;
+      color: #fff;
+    }
   }
-}
 
-.navbar-inverse {
+  .navbar-inverse {
 
-  .badge {
-    background-color: #fff;
-    color: $navbar-inverse-bg;
+    .badge {
+      background-color: #fff;
+      color: $navbar-inverse-bg;
+    }
   }
 }
 
@@ -130,12 +130,17 @@
   }
 }
 
-.panel-primary,
-.panel-success,
-.panel-warning,
-.panel-danger,
-.panel-info {
-  .panel-title {
-    color: #fff;
+.panel {
+
+  .panel-primary,
+  .panel-success,
+  .panel-warning,
+  .panel-danger,
+  .panel-info {
+    .panel-title {
+      color: #fff;
+    }
   }
+
+
 }

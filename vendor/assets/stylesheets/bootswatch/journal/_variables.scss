@@ -42,12 +42,12 @@ $link-hover-decoration: underline !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-import-enabled:     false;
 $font-family-sans-serif:  "News Cycle", "Arial Narrow Bold", sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-serif !default;
+$font-family-import:      true;
 
 $font-size-base:          15px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
@@ -388,13 +388,13 @@ $navbar-default-toggle-icon-bar-bg:        #ccc !default;
 $navbar-default-toggle-border-color:       #ddd !default;
 
 
-// Inverted navbar
+//=== Inverted navbar
 // Reset inverted navbar basics
 $navbar-inverse-color:                      #fff !default;
 $navbar-inverse-bg:                         $brand-primary !default;
 $navbar-inverse-border:                     darken($navbar-inverse-bg, 10%) !default;
 
-//=== Inverted navbar links
+// Inverted navbar links
 $navbar-inverse-link-color:                 #fff !default;
 $navbar-inverse-link-hover-color:           #fff !default;
 $navbar-inverse-link-hover-bg:              darken($navbar-inverse-bg, 6.5%) !default;

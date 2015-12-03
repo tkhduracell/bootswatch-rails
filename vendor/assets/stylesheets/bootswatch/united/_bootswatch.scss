@@ -2,28 +2,30 @@
 // Bootswatch
 // -----------------------------------------------------
 
-@if $font-import-enabled {
-  @import url("//fonts.googleapis.com/css?family=Ubuntu:400,700");
-}
+@if $font-family-import {
+  @import url("https://fonts.googleapis.com/css?family=Ubuntu:400,700");
+} 
 
 // Navbar =====================================================================
 
-.navbar-default {
+.navbar {
 
-  .badge {
-    background-color: #fff;
-    color: $navbar-default-bg;
+  .navbar-default {
+
+    .badge {
+      background-color: #fff;
+      color: $navbar-default-bg;
+    }
+  }
+
+  .navbar-inverse {
+
+    .badge {
+      background-color: #fff;
+      color: $navbar-inverse-bg;
+    }
   }
 }
-
-.navbar-inverse {
-
-  .badge {
-    background-color: #fff;
-    color: $navbar-inverse-bg;
-  }
-}
-
 
 @media (max-width: $grid-float-breakpoint-max) {
 
