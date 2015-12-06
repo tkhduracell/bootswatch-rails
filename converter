@@ -124,22 +124,13 @@ mark_variables_default = lambda do |line, _|
   end
 end
 
-make_font_import_optional = lambda do |line, _|
+remove_font_import = lambda do |line, _|
   if line.include?("@import url(\"https://fonts.googleapis.com/css?family=")
-    "@if $font-family-import {\n  #{line.chomp}\n} \n"
+    "// Google Web Font removed here!"
   else 
     line
   end
 end
-
-make_font_import_variable = lambda do |line, _|
-  if line.include?("$font-family-base")
-    "#{line.chomp}\n$font-family-import:      true;\n"
-  else 
-    line
-  end
-end
-
 
 line_processors = [
   swap_variable_prefix,
@@ -154,8 +145,7 @@ line_processors = [
   swap_spin_adjust_hue,
   resolve_ampersand_dash,
   clear_out_escapes,
-  make_font_import_optional,
-  make_font_import_variable 
+  remove_font_import
 ]
 
 if File.basename(src_file_path) =~ /variables/
